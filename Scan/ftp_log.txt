@@ -1,0 +1,26 @@
+└─$ ftp 10.0.0.2
+Connected to 10.0.0.2.
+220 (vsFTPd 2.3.4)
+Name (10.0.0.2:kali): msfadmin
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> 
+ftp> ls
+229 Entering Extended Passive Mode (|||7315|).
+150 Here comes the directory listing.
+drwxr-xr-x    6 1000     1000         4096 Apr 28  2010 vulnerable
+226 Directory send OK.
+ftp> 
+ftp> mkdir teste.txt
+257 "/home/msfadmin/teste.txt" created
+ftp> 
+ftp> ls
+229 Entering Extended Passive Mode (|||62122|).
+150 Here comes the directory listing.
+drwxr-xr-x    2 1000     1000         4096 Nov 02 19:47 teste.txt
+drwxr-xr-x    6 1000     1000         4096 Apr 28  2010 vulnerable
+226 Directory send OK.
+ftp> 

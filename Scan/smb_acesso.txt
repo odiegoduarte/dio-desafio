@@ -1,0 +1,36 @@
+└─$ smbclient -L //10.0.0.2 -U 'msfadmin%msfadmin'                                                                                                                                       
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        print$          Disk      Printer Drivers
+        tmp             Disk      oh noes!
+        opt             Disk      
+        IPC$            IPC       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+        ADMIN$          IPC       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+        msfadmin        Disk      Home Directories
+Reconnecting with SMB1 for workgroup listing.
+
+        Server               Comment
+        ---------            -------
+
+        Workgroup            Master
+        ---------            -------
+        WORKGROUP            METASPLOITABLE
+                                                                                                                                                                                         
+┌──(kali㉿kali)-[~/Desktop/wordlist]
+└─$ smbclient //10.0.0.2/tmp -U 'msfadmin%msfadmin' -c 
+Try "help" to get a list of possible commands.
+smb: \> cd /tmp/
+cd \tmp\: NT_STATUS_OBJECT_NAME_NOT_FOUND
+smb: \> mkdir Teste
+smb: \> ls
+  .                                   D        0  Mon Nov  2 17:02:52 2026
+  ..                                 DR        0  Sun May 20 16:36:12 2012
+  .ICE-unix                          DH        0  Mon Nov  2 15:37:17 2026
+  .X11-unix                          DH        0  Mon Nov  2 15:37:21 2026
+  .X0-lock                           HR       11  Mon Nov  2 15:37:21 2026
+  Teste                               D        0  Mon Nov  2 17:02:52 2026
+  4501.jsvc_up                        R        0  Mon Nov  2 15:37:27 2026
+
+                7282168 blocks of size 1024. 5437364 blocks available
+smb: \> 
